@@ -1,6 +1,6 @@
 ![Opening Screen](../WDProjCesiumJacintoMapalo/assets/OpeningScreen.png)
 # scroll down to enter next page (Description) (Main Color Palette will be Pink & White)
-![Description](../WDProjCesiumJacintoMapalo/assets/Description Page.png)
+![Description](../WDProjCesiumJacintoMapalo/assets/Description.png)
 # scroll down to enter home page
 ![Home Page](../WDProjCesiumJacintoMapalo/assets/HomePage.png)
 # scroll down to enter index
