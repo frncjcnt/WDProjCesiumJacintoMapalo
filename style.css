@@ -54,6 +54,7 @@ button {
     background: none;
 }
 
+
 img { 
     width: 100%;
 }
@@ -62,6 +63,24 @@ img {
     margin: 0 auto;
     padding: 0 20px;
     max-width: var(--site-max-width);
+}
+
+.section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5x;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
 }
 
 /*navbar heh*/
@@ -102,6 +121,10 @@ header .navbar {
 .navbar .nav-menu .nav-link:hover {
     color: var(--primary-color);
     background: var(--secondary-color);
+}
+
+.navbar :where(#menu-close-button, #menu-open-button) {
+    display: none;
 }
 
 .hero-section {
@@ -169,6 +192,89 @@ header .navbar {
     margin-right: 30px;
 }
 
+/*about section heh*/
+.about-section {
+    padding: 120px 0;
+    background: var(--light-pink-color);
+}
+
+.about-section .section-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper .about-image{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+
+.about-section .about-details .section-title {
+    padding: 0;
+}
+
+.about-section .about-details {
+    max-width: 50%;
+}
+
+.about-section .about-details .text {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: var(--font-size-m);
+}
+
+.about-section .social-link-list {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.about-section .social-link-list .social-link {
+    color: var(--primary-color);
+    font-size: var(--font-size-l);
+    transition: 0.2s ease;
+}
+
+.about-section .social-link-list .social-link:hover {
+    color: var(--secondary-color);
+}
+
+/*the cartegories*/
+
+.buildcategories-section {
+    color: var(--white-color);
+    background: var(--dark-color);
+}
+
+.buildcategories-section .build-item {
+display: flex;
+flex-wrap: wrap;
+gap: 110px;
+align-items: center;
+justify-content: space-between;
+
+}
+
+.buildcategories-section .build-item .buildcategories {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(100% / 3 - 110px);
+
+}
+
+.buildcategories-section .build-item .buildcategories .category-image {
+    max-width: 83%;
+    aspect-ratio: 1;
+
+}
+
 @media screen and (max-width: 900px) {
 :root {
     --font-size-m: 1rem;
@@ -177,7 +283,20 @@ header .navbar {
     --font-size-xxl: 1.8rem;
 }
 
+body.show-mobile-menu header::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.2);
+}
+    
+
 .navbar :where(#menu-close-button, #menu-open-button) {
+    display: block;
     font-size: var(--font-size-l);
 }
 
@@ -203,8 +322,9 @@ header .navbar {
     display: block;
     background: var(--white-color);
     position: fixed;
-    left: 0;
+    left: -300px;
     top: 0;
+    z-index: 20;
     width: 300px;
     height: 100%;
     display: flex;
@@ -212,7 +332,13 @@ header .navbar {
     align-items: center;
     padding-top: 100px;
     background: var(--white-color);
+    transition: left 0.2s ease
+    
    }
+
+    body.show-mobile-menu .navbar .nav-menu {
+        left: -0px;
+    }
 
    .navbar .nav-menu .nav-link {
     color: var(--dark-color);
@@ -220,5 +346,39 @@ header .navbar {
     margin-top: 17px;
     font-size: var(--font-size-l);
    }
+
+   .hero-section .section-content {
+    gap: 50px;
+    text-align: center;
+    padding: 30px 20px 20px;
+    flex-direction: column-reverse;
+    justify-content: center;
+   }
+
+   .hero-section .hero-details :is(.subtitle, .description), .about-section .about-details{
+    max-width: 100%;
+   }
+
+   .hero-section .hero-details .buttons {
+    justify-content: center;
+
+   }
+
+    .hero-section .hero-image-wrapper {
+        max-width: 270px;
+        margin-right: 0;
+    }
+
+    .about-section .section-content {
+        gap: 70px;
+        flex-direction: column-reverse;
+    }
+
+    .about-section .about-image-wrapper .about-image {
+        width: 100%;
+        height: 100%;
+        max-width: 250px;
+        aspect-ratio: 1;
+    }
     
 }
