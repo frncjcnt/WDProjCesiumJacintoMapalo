@@ -81,3 +81,76 @@ if (slider) {
 }, 20);
   });
 }
+// Scroll animation for elements with .scroll-animate
+const scrollElements = document.querySelectorAll(".scroll-animate");
+
+function elementInView(el, offset = 0) {
+  const elementTop = el.getBoundingClientRect().top;
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) - offset
+  );
+}
+
+function displayScrollElement(el) {
+  el.classList.add("active");
+}
+
+function hideScrollElement(el) {
+  el.classList.remove("active");
+}
+
+function handleScrollAnimation() {
+  scrollElements.forEach((el) => {
+    if (elementInView(el, 100)) {
+      displayScrollElement(el);
+    } else {
+      hideScrollElement(el);
+    }
+  });
+}
+
+window.addEventListener("scroll", () => {
+  handleScrollAnimation();
+});
+
+// Trigger once on load in case section is already in view
+window.addEventListener("load", () => {
+  handleScrollAnimation();
+});
+
+// Back to Top Button
+document.addEventListener("DOMContentLoaded", function() {
+    const backToTopButton = document.getElementById('back-to-top');
+
+    // Show button after scrolling
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'none';
+        }
+    });
+
+    // Smooth scroll to top
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+
+// Scroll animation for elements with .scroll-animate (updated version)
+function revealOnScroll() {
+  scrollElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    const offset = 100; // distance from bottom of viewport to trigger
+    if (rect.top <= (window.innerHeight - offset)) {
+      el.classList.add('visible'); // fade in / slide in effect
+    } else {
+      el.classList.remove('visible'); // remove if out of view
+    }
+  });
+}
+
+// Listen for scroll and load events
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
