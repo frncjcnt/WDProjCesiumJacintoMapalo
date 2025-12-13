@@ -40,6 +40,14 @@
     --site-max-width: 1300px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
 ul {
     list-style: none;
 }
@@ -601,4 +609,9 @@ body.show-mobile-menu header::before {
     .category-section .section-content {
         gap: 20px;
     }
+}
+
+/* random */
+html, body {
+    scroll-behavior: smooth;
 }
