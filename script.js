@@ -60,3 +60,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+//for this one, im basically just like making it infinite scroll
+const slider = document.querySelector(".slider-wrapper");
+
+if (slider) {
+  const list = slider.querySelector(".models-list");
+  const items = list.innerHTML;
+
+
+  list.innerHTML += items;
+
+  slider.addEventListener("scroll", () => {
+    if (slider.scrollLeft >= list.scrollWidth / 2) {
+      slider.scrollLeft = 0;
+    }
+
+    setInterval(() => {
+  slider.scrollLeft += 1;
+}, 20);
+  });
+}

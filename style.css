@@ -297,6 +297,57 @@ justify-content: space-between;
 
 }
 
+/* 3d model section, not the actual posts, just the most recommended */
+/* slider container */
+.slider-container {
+  overflow: hidden;
+}
+
+/* horizontal scrolling */
+.models-list {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+/* hide scrollbar (optional but pretty) */
+.models-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* each card */
+.models {
+  min-width: 280px;
+  scroll-snap-align: center;
+  background: var(--white-color);
+  padding: 30px;
+  border-radius: var(--border-radius-m);
+  flex-shrink: 0;
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-wrapper {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.models-list {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+}
+
+.models {
+  min-width: 280px;
+  flex-shrink: 0;
+}
+
 @media screen and (max-width: 1024px) {
     .buildcategories-section .build-item  {
         gap: 60px;
