@@ -494,3 +494,111 @@ body.show-mobile-menu header::before {
     border-color: var(--white-color);
     background: transparent;
 }
+
+/*footer section*/
+
+.footer-section {
+    padding: 20px;
+    background: var(--dark-color);
+}
+
+.footer-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-section :where(.copyright-text), .social-link, .policy-link {
+    color: var(--white-color);
+    transition: 0.2s ease;
+}
+
+.footer-section .social-link-list {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-section .social-link-list .social-link {
+    font-size: var(--font-size-l);
+}
+
+.footer-section .social-link-list .social-link:hover, .footer-section .policy-text .policy-link:hover {
+    color: var(--secondary-color);
+}
+
+.footer-section .policy-text .seperator {
+    color: var(--white-color);
+    margin: 0 5px;
+}
+
+/*ONLY Buildings Posts CSS*/
+.category-section {
+    background: var(--dark-color);
+    color: var(--white-color);
+    padding: 50px 0 100px;
+}
+
+.category-section .section-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: var(--site-max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.category-section .build-post {
+    background: var(--primary-color);
+    border-radius: var(--border-radius-m);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.category-section .build-post a {
+    display: block;
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 15px;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.category-section .build-post a:hover {
+    color: var(--secondary-color);
+}
+
+.category-section .build-post img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.category-section .build-post .name {
+    margin: 12px 0 6px;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semi-bold);
+}
+
+.category-section .build-post .text {
+    font-size: var(--font-size-m);
+    margin-bottom: 10px;
+}
+
+.category-section .build-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+    .category-section .section-content {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .category-section .section-content {
+        gap: 20px;
+    }
+}
