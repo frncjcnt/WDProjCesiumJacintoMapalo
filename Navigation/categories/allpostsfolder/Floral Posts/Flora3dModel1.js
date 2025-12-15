@@ -5,9 +5,9 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
 const renderer = new THREE.WebGLRenderer({antialias : true}); //creates renderer instance
 renderer.outputColorSpace = THREE.SRGBColorSpace; //defines color space, note that `THREE.SRGBColorSpace is default` 
-renderer.setSize( 480, 480 ); //sets renderer dimensions
+renderer.setSize( window.innerWidth, window.innerHeight ); //sets renderer dimensions
 renderer.setClearColor(0x321017); //sets default color
-renderer.setPixelRatio(1); //sets aspect ratio (px)
+renderer.setPixelRatio(window.innerWidth / window.innerHeight); //sets aspect ratio (px)
 document.body.appendChild(renderer.domElement); //adds to html file
 
 
@@ -15,7 +15,7 @@ renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap; //adds shadows
 
 const scene = new THREE.Scene(); // creates scene instance
-const camera = new THREE.PerspectiveCamera( 90, 1, 0.1, 1000 ); //(FOV, Aspect Ratio [width / height], "near", "far")
+const camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 1000 ); //(FOV, Aspect Ratio [width / height], "near", "far")
 camera.position.set(25, 25, 25);
 camera.lookAt(0,0,0);
 
@@ -45,7 +45,7 @@ const pmrem = new THREE.PMREMGenerator(renderer);
 scene.environment = pmrem.fromScene(new RoomEnvironment()).texture;
 scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 1.0));
 
-const loader = new GLTFLoader().setPath('/WDProjCesiumJacintoMapalo/assets/3DModelAssets/forest_demo/'); //calls the gltf loader, sets path/folder to pull scene from
+const loader = new GLTFLoader().setPath('./forest_demo/'); //calls the gltf loader, sets path/folder to pull scene from
 loader.load('scene.gltf', async (gltf) => {
 
   const parser = gltf.parser;
@@ -109,6 +109,17 @@ loader.load('scene.gltf', async (gltf) => {
 
   scene.add(gltf.scene);
 });
+function onWindowResize() {
+  const newWidth = window.innerWidth;
+  const newHeight = window.innerHeight;
+
+  renderer.setSize(newWidth, newHeight);
+  camera.aspect = newWidth / newHeight;
+  camera.updateProjectionMatrix();
+}
+
+window.addEventListener('resize', onWindowResize, false);
+
 function animate(){ //creates function to animate scene
     requestAnimationFrame(animate);
     controls.update();
