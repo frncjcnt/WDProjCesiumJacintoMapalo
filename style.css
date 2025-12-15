@@ -10,12 +10,12 @@
 
 :root{
     /*colors, if u want franco, change them here*/
-    --white-color: #fff;
+    --white-color: #fff2be;
     --dark-color: #252525;
     --primary-color: #321017;
     --secondary-color: #f3961c;
-    --light-pink-color: #faf4f5;
-    --medium-gray-color: #ccc;
+    --light-pink-color: #fff5d8;
+    --medium-gray-color: #14b53a;
 
     /*font-sizes*/
     --font-size-s: 0.9rem;
@@ -755,6 +755,8 @@ html, body {
     transition: transform 0.3s ease;
 }
 
+.hero-model-wrapper
+
 /* Ooptional hover kc papansin ako*/
 .hero-image-wrapper .hero-image:hover,
 .models-section .models .user-image:hover {
@@ -874,4 +876,12 @@ html, body {
     .models-section .models p.feedback {
         font-size: 0.95rem;
     }
+}
+
+/*3d model stuff yayyy*/
+
+.model {
+    width:100%;
+    height:100%;
+    position:right;
 }
