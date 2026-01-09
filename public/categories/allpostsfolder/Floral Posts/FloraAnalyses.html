@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MineMaster - Buildings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="../../../../style.css">
+  <link rel="icon" type="image" href="images/faviconslay.png">
+  <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+        "imports":{
+            "three": "https://unpkg.com/three@v0.153.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@v0.153.0/examples/jsm/"
+        }
+    }
+  </script>
+</head>
+<body> 
+
+<!-- Header with Mobile Menu -->
+<header>
+  <nav class="navbar section-content">
+      <a href="../../../../index.html" class="nav-logo"> 
+          <h2 class="logotext">MineMaster</h2>
+      </a>
+
+      <ul class="nav-menu"> 
+          <button id="menu-close-button" class="fas fa-times"></button>
+          <li class="nav-item"><a href="../../../../index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="../../../../index.html#about" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="../../../../index.html#buildingcategories" class="nav-link">Build Guides</a></li>
+          <li class="nav-item"><a href="../../../../index.html#models" class="nav-link">3D Models</a></li>
+          <li class="nav-item"><a href="../../../../index.html#contactus" class="nav-link">Contact</a></li>
+      </ul>
+
+      <button id="menu-open-button" class="fas fa-bars"></button>
+  </nav>
+</header>
+
+<main>
+<!-- Hero Section -->
+    <section class="hero-section">
+  <div class="section-content">
+    <div class="hero-details">
+      <h2 class="title scroll-animate">Flora</h2>
+      <h3 class="subtitle scroll-animate">Applicable in most contexts</h3>
+      <span class="model-badge no-model scroll-animate">An analysis of the techniques used in the build "Forest Demo" by patrix from Sketchfab</span>
+      <p class="description scroll-animate">
+        [include short write-up about how or why to incorporate flora]
+    </div>
+  </div>
+  <div class = model>
+    <script type="module" src="/Flora3dModel1.js"></script>   
+  </div>
+</section>
+
+<!-- Footer -->
+    <footer class="footer-section">
+        <div class="section-content">
+            <p class="copyright-text">@ 2025 MineMaster</p>
+    
+
+        <div class="social-link-list">
+                    <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                </div> 
+
+                <p class="policy-text">
+                    <a href="#" class="policy-link"> Privacy Policy</a>
+                    <span class="seperator"></span>
+                    <a href="#" class="policy-link"> Terms of Service</a>
+                </p>
+                
+            </div>
+       </footer>
+
+</main>
+<script src="../../../../script.js"></script>
+<!-- Back to Top Button -->
+<button id="back-to-top" title="Back to Top">⬆️</button>
+</body>
+</html>
