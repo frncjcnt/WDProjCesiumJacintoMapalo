@@ -43,4 +43,7 @@ After the user submits the sign-up form, their account information is saved in t
 The user's account data will be stored using **localStorage** in the browser. This allows
 data to persist even after refreshing the page, multiple pages of the website to access the user information, safe local storage without needing a server or database
 
+### ADDITIONAL ADDS TO THE WEBSITE:
+Other than the requirement for the proposal, we were planning on making a seperate submission form using google forms where users can submit their own personal build! We would also like to add a 'discussion forum' where people are able to comment on specific builds and another at the bottom of the home screen where users comment on the website as a whole. This is great for feedback or just general discussions.
+
 ## PART 2: DESIGN OF THREE NEW WEBPAGES (using canva)
