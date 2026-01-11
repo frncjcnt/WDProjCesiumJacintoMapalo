@@ -1,25 +1,25 @@
-![Opening Screen](./assets/OpeningScreen.png)
+![Opening Screen](/assets/readMeGuides/OpeningScreen.png)
 # scroll down to enter next page (Description) (Main Color Palette will be Pink & White)
-![Description](./assets/Description.png)
+![Description](/assets/readMeGuides/Description.png)
 # scroll down to enter home page
-![Home Page](./assets/HomePage.png)
+![Home Page](/assets/readMeGuides/HomePage.png)
 # scroll down to enter index
-![Index](./assets/Index.png)
+![Index](/assets/readMeGuides/Index.png)
 # from here, either click one of the links at the top, OR scroll to the end of the feed, where either the build guides or 3d model pages are. Scroll down to enter about us
-![About Us](./assets/AboutUsPage.png)
+![About Us](/assets/readMeGuides/AboutUsPage.png)
 # scroll down to enter the contact page
-![Contact](./assets/ContactPage.png)
+![Contact](/assets/readMeGuides/ContactPage.png)
 # from the header/index, you can enter into either the build page...
-![Build Guides](./assets/BuildGuidesPage.png)
+![Build Guides](/assets/readMeGuides/BuildGuidesPage.png)
 # ...or the 3d models page
-![3D Models](./assets/3DModelsPage.png)
+![3D Models](/assets/readMeGuides/3DModelsPage.png)
 # every page (excluding the opening and description) will be accessible from the header.
 # this will be our logo & the favicon to be used:
-![Logo / Favicon](./assets/Logo&Favicon.png)
+![Logo / Favicon](/assets/readMeGuides/Logo&Favicon.png)
 # this will be our footer:
-![Footer](./assets/Footer.png)
+![Footer](/assets/readMeGuides/Footer.png)
 # this will be how we incorporate JS:
-![JS](./assets/JSIncorporation.png)
+![JS](/assets/readMeGuides/JSIncorporation.png)
 
 ## HTML FORM DESIGN (sign up/login form)
 
@@ -47,3 +47,13 @@ data to persist even after refreshing the page, multiple pages of the website to
 Other than the requirement for the proposal, we were planning on making a seperate submission form using google forms where users can submit their own personal build! We would also like to add a 'discussion forum' where people are able to comment on specific builds and another at the bottom of the home screen where users comment on the website as a whole. This is great for feedback or just general discussions.
 
 ## PART 2: DESIGN OF THREE NEW WEBPAGES (using canva)
+![SIGN UP FORM](/assets/readMeGuides/SignUpForm.png)
+# This is where users can sign up for an account on the website
+![LOG IN FORM](/assets/readMeGuides/LoginForm.png)
+# This is where returning users can log back into their account
+![Saved Builds](/assets/readMeGuides/SavedBuilds.png)
+# A logged in user can access this page to view pages on the site they have saved
+![Submissions Page](/assets/readMeGuides//SubmissionsPage.png)
+# A user inputs instructions, required materials, steps, and images of those steps. We, the developers, review the submission, format the inputs, and add it as a page under one of the categories.
+![Discussion Forum](/assets/readMeGuides/DiscussionForum.png)
+# Logged in users can discuss building techniques, blocks, builds, etc.
