@@ -9,7 +9,7 @@
 }
 
 :root{
-    /*colors, if u want franco, change them here*/
+    /*colors, if u want franco, change them here*/ 
     --white-color: #fff2be;
     --dark-color: #252525;
     --primary-color: #321017;
@@ -137,7 +137,7 @@ header .navbar {
 
 .hero-section {
     min-height: 100vh;
-    background: var(--primary-color);
+    background-image: url("/images/backgroundRed.png");  
 }
 
 .hero-section .section-content {
@@ -196,14 +196,14 @@ header .navbar {
 }
 
 .hero-section .hero-image-wrapper {
-    max-width: 500px;
+    max-width: 1000px;
     margin-right: 30px;
 }
 
 /*about section heh*/
 .about-section {
     padding: 120px 0;
-    background: var(--light-pink-color);
+    background-image: url("/images/backgroundOffWhite.png");
 }
 
 .about-section .section-content {
@@ -255,7 +255,7 @@ header .navbar {
 
 .buildcategories-section {
     color: var(--white-color);
-    background: var(--dark-color);
+    background-image: url("/images/backgroundDarkGray.png");
     padding: 50px 0 100px;
 }
 
@@ -299,6 +299,12 @@ justify-content: space-between;
 
 /* 3d model section, not the actual posts, just the most recommended */
 /* slider container */
+
+.models-section {
+    background-image: url("/images/backgroundRed.png");
+    color:#fff2be
+}
+
 .slider-container {
   overflow: hidden;
 }
@@ -319,6 +325,7 @@ justify-content: space-between;
 
 /* each card */
 .models {
+    
   min-width: 280px;
   scroll-snap-align: center;
   background: var(--white-color);
@@ -346,6 +353,14 @@ justify-content: space-between;
 .models {
   min-width: 280px;
   flex-shrink: 0;
+}
+
+.modelName {
+    color:var(--dark-color)
+}
+
+.feedback {
+    color:var(--dark-color)
 }
 
 @media screen and (max-width: 1024px) {
@@ -449,7 +464,7 @@ body.show-mobile-menu header::before {
    }
 
     .hero-section .hero-image-wrapper {
-        max-width: 270px;
+        max-width: 470px;
         margin-right: 0;
     }
 
@@ -502,26 +517,26 @@ body.show-mobile-menu header::before {
 
 
 
-.contact-setion {
-    background: var(--white-color); 
+.contact-section {
+    background-image: url("/images/backgroundOffWhite.png");
     padding: 80px 0; 
     color: var(--dark-color); 
 }
 
-.contact-setion .section-content {
+.contact-section .section-content {
     max-width: var(--site-max-width);
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.contact-setion .contact-info-list {
+.contact-section .contact-info-list {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 30px; 
 }
 
-.contact-setion .contact-info-list li {
+.contact-section .contact-info-list li {
     line-height: 1.8; 
     font-size: var(--font-size-m);
     display: flex;
@@ -529,36 +544,37 @@ body.show-mobile-menu header::before {
     gap: 15px; 
 }
 
-.contact-setion .contact-info-list li i {
+.contact-section .contact-info-list li i {
     font-size: var(--font-size-l);
     color: var(--secondary-color); 
 }
 
 /*Submission of work button design*/
-.contact-setion .submit-form {
+.contact-section .submit-form {
     display: inline-block;
     padding: 10px 26px;
     border: 2px solid transparent;
     border-radius: var(--border-radius-m);
-    background: var(--secondary-color);
-    color: var(--primary-color);
+    background-image: url("/images/backgroundDarkGray.png");
+    color: var(--white-color);
     font-weight: var(--font-weight-medium);
     text-decoration: none; 
     transition: all 0.3s ease; 
     margin-top: 20px; 
 }
 
-.contact-setion .submit-form:hover {
+.contact-section .submit-form:hover {
     color: var(--white-color);
     border-color: var(--white-color);
-    background: transparent;
+    scale: 1.1;
+    transition: 0.25s;
 }
 
 /*footer section*/
 
 .footer-section {
     padding: 20px;
-    background: var(--dark-color);
+    background-image: url("/images/backgroundDarkGray.png")
 }
 
 .footer-section .section-content {
@@ -635,6 +651,7 @@ body.show-mobile-menu header::before {
 
 .category-section .build-post .name {
     margin: 12px 0 6px;
+    color:var(--white-color);
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-semi-bold);
 }
@@ -745,7 +762,7 @@ html, body {
 .hero-image-wrapper .hero-image,
 .models-section .models .user-image {
     width: 100%;
-    max-width: 500px; 
+    max-width: 700px; 
     height: auto;
     border-radius: var(--border-radius-m);
     margin: 20px 0;
@@ -765,6 +782,7 @@ html, body {
 
 /* Step-by-step guide layout */
 .models-section .models {
+    
     display: flex;
     align-items: flex-start;
     gap: 40px; 
@@ -876,12 +894,4 @@ html, body {
     .models-section .models p.feedback {
         font-size: 0.95rem;
     }
-}
-
-/*3d model stuff yayyy*/
-
-.model {
-    width:100%;
-    height:100%;
-    position:right;
 }
