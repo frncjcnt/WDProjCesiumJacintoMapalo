@@ -3,21 +3,27 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'; //allows 3D Mod
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
-const renderer = new THREE.WebGLRenderer({antialias : true}); //creates renderer instance
+const container = document.getElementById("model-container");
+const renderer = new THREE.WebGLRenderer({antialias : true, alpha: true}); //creates renderer instance
 renderer.outputColorSpace = THREE.SRGBColorSpace; //defines color space, note that `THREE.SRGBColorSpace is default` 
-renderer.setSize( window.innerWidth, window.innerHeight ); //sets renderer dimensions
+// renderer.setSize( window.innerWidth, window.innerHeight ); //sets renderer dimensions
 renderer.setClearColor(0x321017); //sets default color
 renderer.setPixelRatio(window.innerWidth / window.innerHeight); //sets aspect ratio (px)
-document.body.appendChild(renderer.domElement); //adds to html file
 
+renderer.setSize(container.clientWidth, container.clientHeight);
+
+container.appendChild(renderer.domElement);
 
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap; //adds shadows
 
+renderer.setClearColor(0x000000, 0);
+
 const scene = new THREE.Scene(); // creates scene instance
-const camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 1000 ); //(FOV, Aspect Ratio [width / height], "near", "far")
+const camera = new THREE.PerspectiveCamera( 90, container.clientWidth / container.clientHeight, 0.1, 1000 ); //(FOV, Aspect Ratio [width / height], "near", "far")
 camera.position.set(25, 25, 25);
 camera.lookAt(0,0,0);
+camera.updateProjectionMatrix();
 
 const controls = new OrbitControls(camera, renderer.domElement) //arg 1: ref. to camera object, arg 2: dom element
 controls.enableDamping = true; //smooth rotation
@@ -100,6 +106,15 @@ loader.load('scene.gltf', async (gltf) => {
 
     child.material = newMat;
   });
+
+  gltf.scene.traverse((obj) => {
+  if (obj.isMesh && obj.material.map) {
+    obj.material.transparent = true;
+    obj.material.alphaTest = 0.1;   // Minecraft-style cutoff
+    obj.material.depthWrite = false;
+    obj.material.needsUpdate = true;
+  }
+});
 
   window.addEventListener('resize', () => {
   camera.aspect = container.clientWidth / container.clientHeight;
