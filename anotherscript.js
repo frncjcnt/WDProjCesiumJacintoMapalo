@@ -1,28 +1,34 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.querySelector(".container");
 
+  // Get elements
+  const container = document.querySelector(".container");
   const showSignup = document.getElementById("showSignup");
   const showLogin = document.getElementById("showLogin");
-
   const bottomSignup = document.getElementById("bottomSignup");
   const bottomLogin = document.getElementById("bottomLogin");
 
+  // Function to show signup
+  function openSignup() {
+    container.classList.add("active");
+  }
+
+  // Function to show login
+  function openLogin() {
+    container.classList.remove("active");
+  }
+
+  // Add event listeners
   showSignup.addEventListener("click", (e) => {
     e.preventDefault();
-    container.classList.add("active");
+    openSignup();
   });
 
   showLogin.addEventListener("click", (e) => {
     e.preventDefault();
-    container.classList.remove("active");
+    openLogin();
   });
 
+  bottomSignup.addEventListener("click", openSignup);
+  bottomLogin.addEventListener("click", openLogin);
 
-  bottomSignup.addEventListener("click", () => {
-    container.classList.add("active");
-  });
-
-  bottomLogin.addEventListener("click", () => {
-    container.classList.remove("active");
-  });
 });
