@@ -107,6 +107,12 @@ header .navbar {
     justify-content: space-between;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .navbar .nav-logo .logotext {
     color: var(--white-color);
     font-size: var(--font-size-xl);
@@ -115,7 +121,8 @@ header .navbar {
 
 .navbar .nav-menu {
     display: flex;
-    gap: 10px;
+  gap: 30px;
+  list-style: none;
 }
 
 .navbar .nav-menu .nav-link {
@@ -894,4 +901,64 @@ html, body {
     .models-section .models p.feedback {
         font-size: 0.95rem;
     }
+}
+
+/* Hide profile button on navbar */
+.profile-btn {
+  display: none;
+}
+
+/* Style profile menu item */
+.profile-menu {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* show nav menu on small screens */
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .nav-menu.active {
+    display: block;
+  }
+}
+
+
+.nav-menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Desktop profile */
+.profile-desktop {
+  color: var(--white-color);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* hide mobile profile on desktop */
+.profile-mobile {
+  display: none;
+}
+
+/* SHOW MOBILE PROFILE ONLY WHEN SCREEN IS SMALL */
+@media (max-width: 768px) {
+  .profile-desktop {
+    display: none;
+  }
+
+  .profile-mobile {
+    display: block;
+  }
 }
