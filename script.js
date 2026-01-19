@@ -154,3 +154,9 @@ function revealOnScroll() {
 // Listen for scroll and load events
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
+
+const profileBtn = document.getElementById("profileBtn");
+
+profileBtn.addEventListener("click", () => {
+  window.location.href = "loginandsignup.html"; // <-- change this to your login page name
+});

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login & Signup</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styleforsignuplogin.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- LOGIN BOX -->
+    <div class="form-box login-box">
+      <h2>Login</h2>
+      <form>
+        <div class="input-box">
+          <input type="text" placeholder="Username" required>
+          <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" required>
+          <i class='bx bxs-lock-alt'></i>
+        </div>
+        <button class="btn" type="submit">Login</button>
+      </form>
+
+      <p class="toggle-text">
+        Don't have an account?
+        <a href="#" class="toggle-btn" id="showSignup">Sign Up</a>
+      </p>
+
+      <!-- Bottom button -->
+      <button class="bottom-btn" id="bottomSignup">
+        Don't have an account? Register here!
+      </button>
+    </div>
+
+    <!-- SIGNUP BOX -->
+    <div class="form-box signup-box">
+      <h2>Sign Up</h2>
+      <form>
+        <div class="input-box">
+          <input type="text" placeholder="Username" required>
+          <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+          <input type="email" placeholder="Email" required>
+          <i class='bx bxs-envelope'></i>
+        </div>
+        <div class="input-box">
+          <input type="password" placeholder="Password" required>
+          <i class='bx bxs-lock-alt'></i>
+        </div>
+        <button class="btn" type="submit">Sign Up</button>
+      </form>
+
+      <p class="toggle-text">
+        Already have an account?
+        <a href="#" class="toggle-btn" id="showLogin">Login</a>
+      </p>
+
+      <!-- Bottom button -->
+      <button class="bottom-btn" id="bottomLogin">
+        Already have an account? Login here!
+      </button>
+    </div>
+
+  </div>
+
+  <script src="anotherscript.js"></script>
+</body>
+</html>
