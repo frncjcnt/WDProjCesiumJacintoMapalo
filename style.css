@@ -144,7 +144,7 @@ header .navbar {
 
 .hero-section {
     min-height: 100vh;
-    background-image: url("/images/backgroundRed.png");  
+    background-image: url("images/backgroundRed.png");  
 }
 
 .hero-section .section-content {
@@ -210,7 +210,7 @@ header .navbar {
 /*about section heh*/
 .about-section {
     padding: 120px 0;
-    background-image: url("/images/backgroundOffWhite.png");
+    background-image: url("images/backgroundOffWhite.png");
 }
 
 .about-section .section-content {
@@ -262,7 +262,7 @@ header .navbar {
 
 .buildcategories-section {
     color: var(--white-color);
-    background-image: url("/images/backgroundDarkGray.png");
+    background-image: url("images/backgroundDarkGray.png");
     padding: 50px 0 100px;
 }
 
@@ -308,7 +308,7 @@ justify-content: space-between;
 /* slider container */
 
 .models-section {
-    background-image: url("/images/backgroundRed.png");
+    background-image: url("images/backgroundRed.png");
     color:#fff2be
 }
 
@@ -525,7 +525,7 @@ body.show-mobile-menu header::before {
 
 
 .contact-section {
-    background-image: url("/images/backgroundOffWhite.png");
+    background-image: url("images/backgroundOffWhite.png");
     padding: 80px 0; 
     color: var(--dark-color); 
 }
@@ -562,7 +562,7 @@ body.show-mobile-menu header::before {
     padding: 10px 26px;
     border: 2px solid transparent;
     border-radius: var(--border-radius-m);
-    background-image: url("/images/backgroundDarkGray.png");
+    background-image: url("images/backgroundDarkGray.png");
     color: var(--white-color);
     font-weight: var(--font-weight-medium);
     text-decoration: none; 
@@ -581,7 +581,7 @@ body.show-mobile-menu header::before {
 
 .footer-section {
     padding: 20px;
-    background-image: url("/images/backgroundDarkGray.png")
+    background-image: url("images/backgroundDarkGray.png")
 }
 
 .footer-section .section-content {
@@ -768,11 +768,11 @@ html, body {
 /* postimages styling*/
 .hero-image-wrapper .hero-image,
 .models-section .models .user-image {
-    width: 100%;
+    width: 200%;
     max-width: 700px; 
     height: auto;
     border-radius: var(--border-radius-m);
-    margin: 20px 0;
+    margin: 40px 0;
     display: block;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
@@ -961,4 +961,11 @@ html, body {
   .profile-mobile {
     display: block;
   }
+}
+
+.intmodel{
+    width: 720px;
+    height: 720px;
+
+    border:#fff2be, ridge, 10px;
 }
