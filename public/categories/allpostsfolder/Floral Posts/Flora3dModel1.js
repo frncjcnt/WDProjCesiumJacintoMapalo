@@ -29,7 +29,7 @@ camera.updateProjectionMatrix();
 const controls = new OrbitControls(camera, renderer.domElement) //arg 1: ref. to camera object, arg 2: dom element
 controls.enableDamping = true; //smooth rotation
 controls.enablePan = true; //allows camera to shift around
-controls.minDistance = 0.01;
+controls.minDistance = 0.1;
 controls.maxDistance = 100; // min/max zoom distance
 controls.minPolarAngle = 0;
 controls.maxPolarAngle = 5; //how far up/down u can look
