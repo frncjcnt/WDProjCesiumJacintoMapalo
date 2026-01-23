@@ -17,7 +17,8 @@ container.appendChild(renderer.domElement);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap; //adds shadows
 
-renderer.setClearColor(0x000000, 0);
+//renderer.setClearColor(0x000000, 0);
+
 
 const scene = new THREE.Scene(); // creates scene instance
 const camera = new THREE.PerspectiveCamera( 90, container.clientWidth / container.clientHeight, 0.1, 1000 ); //(FOV, Aspect Ratio [width / height], "near", "far")
@@ -28,12 +29,12 @@ camera.updateProjectionMatrix();
 const controls = new OrbitControls(camera, renderer.domElement) //arg 1: ref. to camera object, arg 2: dom element
 controls.enableDamping = true; //smooth rotation
 controls.enablePan = true; //allows camera to shift around
-controls.minDistance = 0.01;
+controls.minDistance = 0.1;
 controls.maxDistance = 100; // min/max zoom distance
 controls.minPolarAngle = 0;
 controls.maxPolarAngle = 5; //how far up/down u can look
 controls.autoRotate = false;
-controls.target = new THREE.Vector3(0,0.1,0); //center of rotation
+controls.target = new THREE.Vector3(0,0,0); //center of rotation
 controls.update(); //applies changes to const controls
 
 const groundGeometry = new THREE.PlaneGeometry(0.1, 0.1, 32, 32); //(w of plane, l of plane, w segment, height segment)
@@ -50,6 +51,10 @@ scene.add(groundMesh)
 const pmrem = new THREE.PMREMGenerator(renderer);
 scene.environment = pmrem.fromScene(new RoomEnvironment()).texture;
 scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 1.0));
+
+const directionalLight = new THREE.DirectionalLight( 0xed8e34, 0.5 );
+directionalLight.position.set(4, 4, 4);
+scene.add( directionalLight );
 
 const loader = new GLTFLoader().setPath('./forest_demo/'); //calls the gltf loader, sets path/folder to pull scene from
 loader.load('scene.gltf', async (gltf) => {
