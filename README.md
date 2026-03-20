@@ -1,4 +1,4 @@
-# Q4 Proj. Milestone : CRUD Implementation
+# FINAL MODIFICATION PROPOSAL - Q4 Proj. Milestone : CRUD Implementation
 ## Implementation
 Expanding on the previous idea of an html form for login/sign up, we will use CRUD for the creation of user accounts.
 signing up implements the create aspect, logging in implements the reading aspect.
