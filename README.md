@@ -7,8 +7,70 @@ We will also include options to change your profile details for updating, or an 
 
 Additionally, discussion forums, which can be accessed by signing up, will also use CRUD.
 
-### wireframes are found at the bottom.
+## Wireframe navigation
 
+Log-in screen
+![login](/assets/q4%20proj%20proposal%20imgs/HOW%20TO%20LOGIN.png)
+log-in and sign-up screens are found at the bottom of this section
+
+![forum](/assets/q4%20proj%20proposal%20imgs/FORUM%20HOME.png)
+
+![adding new comment](/assets/q4%20proj%20proposal%20imgs/FORUM%20HOME%20(2).png)
+
+![adding new comment 2](/assets/q4%20proj%20proposal%20imgs/ADD%20NEW%20COMMENT.png)
+
+![adding new comment 2.2](/assets/q4%20proj%20proposal%20imgs/SUBMIT.png)
+
+![cancellation of comment](/assets/q4%20proj%20proposal%20imgs/ADD%20NEW%20COMMENT%20(2).png)
+
+![cancellation of comment 2.2](/assets/q4%20proj%20proposal%20imgs/CANCEL.png)
+
+![forum](/assets/q4%20proj%20proposal%20imgs/FORUM%20HOME%20(3).png)
+
+![cancellation of comment 2.3](/assets/q4%20proj%20proposal%20imgs/CANCEL%20(2).png)
+
+![new comment](/assets/q4%20proj%20proposal%20imgs/ADD%20NEW%20COMMENT%20(3).png)
+
+![forum](/assets/q4%20proj%20proposal%20imgs/FORUM%20HOME%20(4).png)
+
+![editing of comments](/assets/q4%20proj%20proposal%20imgs/EDIT%20COMMENT.png)
+
+![editing of comments 2](/assets/q4%20proj%20proposal%20imgs/EDIT%20COMMENT%20(2).png)
+
+![forum](/assets/q4%20proj%20proposal%20imgs/FORUM%20HOME%20(5).png)
+
+![editing of comments 2.2](/assets/q4%20proj%20proposal%20imgs/EDIT%20COMMENT%20(3).png)
+
+![forum](/assets/q4%20proj%20proposal%20imgs/FORUM%20HOME%20(6).png)
+
+![editing of comments 2.3](/assets/q4%20proj%20proposal%20imgs/EDIT%20COMMENT%20(4).png)
+
+![editing of comments 2.4](/assets/q4%20proj%20proposal%20imgs/EDIT%20COMMENT%20(5).png)
+
+![editing of comments 2.5](/assets/q4%20proj%20proposal%20imgs/EDIT%20COMMENT%20(6).png)
+
+![forum](/assets/q4%20proj%20proposal%20imgs/FORUM%20HOME%20(7).png)
+
+![editing of comments 2.6](/assets/q4%20proj%20proposal%20imgs/EDIT%20COMMENT%20(7).png)
+
+![editing of comments 2.7](/assets/q4%20proj%20proposal%20imgs/EDIT%20COMMENT%20(8).png)
+
+![editing of comments 2.8](/assets/q4%20proj%20proposal%20imgs/EDIT%20COMMENT%20(9).png)
+
+![forum](/assets/q4%20proj%20proposal%20imgs/FORUM%20HOME%20(8).png)
+
+![SIGN UP FORM](/assets/readMeGuides/SignUpForm.png)
+# This is where users can sign up for an account on the website
+![LOG IN FORM](/assets/readMeGuides/LoginForm.png)
+# This is where returning users can log back into their account
+![Saved Builds](/assets/readMeGuides/SavedBuilds.png)
+# A logged in user can access this page to view pages on the site they have saved
+![Submissions Page](/assets/readMeGuides//SubmissionsPage.png)
+# A user inputs instructions, required materials, steps, and images of those steps. We, the developers, review the submission, format the inputs, and add it as a page under one of the categories.
+![Discussion Forum](/assets/readMeGuides/DiscussionForum.png)
+# Logged in users can discuss building techniques, blocks, builds, etc.
+<br>
+<br>
 
 ![Opening Screen](/assets/readMeGuides/OpeningScreen.png)
 # scroll down to enter next page (Description) (Main Color Palette will be Pink & White)
@@ -59,13 +121,3 @@ data to persist even after refreshing the page, multiple pages of the website to
 Other than the requirement for the proposal, we were planning on making a seperate submission form using google forms where users can submit their own personal build! We would also like to add a 'discussion forum' where people are able to comment on specific builds and another at the bottom of the home screen where users comment on the website as a whole. This is great for feedback or just general discussions.
 
 ## Wireframes
-![SIGN UP FORM](/assets/readMeGuides/SignUpForm.png)
-# This is where users can sign up for an account on the website
-![LOG IN FORM](/assets/readMeGuides/LoginForm.png)
-# This is where returning users can log back into their account
-![Saved Builds](/assets/readMeGuides/SavedBuilds.png)
-# A logged in user can access this page to view pages on the site they have saved
-![Submissions Page](/assets/readMeGuides//SubmissionsPage.png)
-# A user inputs instructions, required materials, steps, and images of those steps. We, the developers, review the submission, format the inputs, and add it as a page under one of the categories.
-![Discussion Forum](/assets/readMeGuides/DiscussionForum.png)
-# Logged in users can discuss building techniques, blocks, builds, etc.
