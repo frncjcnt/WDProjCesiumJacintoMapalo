@@ -1,5 +1,13 @@
 # Q4 Proj. Milestone : CRUD Implementation
-## //insert what mika wrote
+## Implementation
+Expanding on the previous idea of an html form for login/sign up, we will use CRUD for the creation of user accounts.
+signing up implements the create aspect, logging in implements the reading aspect.
+
+We will also include options to change your profile details for updating, or an option to delete your account. 
+
+Additionally, discussion forums, which can be accessed by signing up, will also use CRUD.
+
+### wireframes are found at the bottom.
 
 
 ![Opening Screen](/assets/readMeGuides/OpeningScreen.png)
@@ -50,7 +58,7 @@ data to persist even after refreshing the page, multiple pages of the website to
 ### ADDITIONAL ADDS TO THE WEBSITE:
 Other than the requirement for the proposal, we were planning on making a seperate submission form using google forms where users can submit their own personal build! We would also like to add a 'discussion forum' where people are able to comment on specific builds and another at the bottom of the home screen where users comment on the website as a whole. This is great for feedback or just general discussions.
 
-## PART 2: DESIGN OF THREE NEW WEBPAGES (using canva)
+## Wireframes
 ![SIGN UP FORM](/assets/readMeGuides/SignUpForm.png)
 # This is where users can sign up for an account on the website
 ![LOG IN FORM](/assets/readMeGuides/LoginForm.png)
