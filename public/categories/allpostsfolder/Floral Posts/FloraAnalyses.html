@@ -16,6 +16,43 @@
         }
     }
   </script>
+  <style>
+    .hero-section {
+      background-attachment: fixed;
+    }
+
+    #model-container {
+      position: fixed;
+      height: 60vh;
+      width: calc(50vw - 60px);
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: auto;
+      z-index: 1;
+    }
+
+    .intmodel {
+      position: fixed;
+      z-index: 1;
+    }
+
+    .hero-section .section-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: left;
+      justify-content: left;
+    }
+
+    .hero-section .hero-details {
+      position: relative;
+      z-index: 5;
+      padding-top: 100px;
+      max-width: 30vw;
+      margin-left: 30px;
+    }
+  </style>
 </head>
 <body> 
 
@@ -45,7 +82,7 @@
   <div class="section-content">
     <div class="hero-details">
       <h2 class="title scroll-animate">Flora</h2>
-      <h3 class="subtitle scroll-animate">Applicable in most contexts</h3>
+      <h3 class="subtitle scroll-animate">A guide on incorporating flora into your builds</h3>
       <span class="model-badge no-model scroll-animate">An analysis of the techniques used in the build "Forest Demo" by patrix from Sketchfab
         <br>
         <br>
@@ -53,7 +90,11 @@
         <br>
         For mobile users, drag with two fingers to pan, drag with one finger to rotate, pinch to zoom</span> 
       <p class="description scroll-animate">
-        [include short write-up about how or why to incorporate flora]
+        <br>
+        <br>
+        Flora is one of the easiest ways to instantly add a touch of life to a build. 
+        It tells stories, it shows growth, it eases your build into the rest of your world, and it adds nuance. 
+        This 3D Model, though not perfect, is a good introduction of building realistic-looking vegetation.
     </div>
     <div class = "intmodel" id="model-container">
     <script type="module" src="Flora3dModel1.js"></script>   
